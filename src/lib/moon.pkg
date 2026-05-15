@@ -1,3 +1,7 @@
+import {
+  "moonbitlang/x/fs",
+}
+
 options(
-  "is-main": true,
+  is_main: true,
 )
