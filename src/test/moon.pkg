@@ -1,0 +1,7 @@
+import {
+    "wjw/MoonTemplete/src/lib" @Lib,
+}
+
+options(
+  is_main: false,
+  )

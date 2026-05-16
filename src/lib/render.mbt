@@ -1,5 +1,5 @@
 ///|
-fn render(template : String, data : Map[String, String]) -> String {
+pub fn render(template : String, data : Map[String, String]) -> String {
   let out = StringBuilder::new()
   let mut i = 0
   let n = template.length()
