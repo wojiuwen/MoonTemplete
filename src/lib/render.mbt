@@ -22,7 +22,7 @@ pub fn render(template : String, data : Map[String, String]) -> String {
         let key = tag[0:pi].trim().to_owned()
         let rest = tag[pi + 1:len].trim()
         let default_prefix = "default("
-        if rest.starts_with(default_prefix) && rest.ends_with(")") {
+          if rest.has_prefix(default_prefix) && rest.has_suffix(")") {
           let inner = rest[default_prefix.length():rest.length() - 1].trim()
           let is_quoted = inner.length() >= 2 &&((inner[0] == '"' && inner[inner.length() - 1] == '"')|| (inner[0] == '\'' && inner[inner.length() - 1] == '\''))
           let default_value = if is_quoted {
